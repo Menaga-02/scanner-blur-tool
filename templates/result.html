@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blurred Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Blurred Scanner Image</h1>
+    <p>Your QR code has been blurred successfully. You can view or download it below.</p>
+
+    <div class="image-box">
+      <img src="{{ url_for('send_file', filename=filename) }}" alt="Blurred Result">
+    </div>
+
+    <div class="buttons">
+      <a href="{{ url_for('send_file', filename=filename) }}" download class="btn">⬇ Download Blurred Image</a>
+      <a href="{{ url_for('index') }}" class="btn secondary">🔄 Blur Another</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scanner Blur Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📷 Scanner Blur Tool</h1>
+    <p>Upload your scanned image and automatically blur sensitive QR/Barcode areas.</p>
+
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+        
+        <label class="file-label">
+            Choose Image
+            <input type="file" name="file" accept="image/*" required>
+        </label>
+
+        <button type="submit">🚀 Upload & Blur</button>
+
+    </form>
+</div>
+
+</body>
+</html>
